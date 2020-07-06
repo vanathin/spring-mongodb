@@ -1,3 +1,5 @@
+Spring data MongoDB Full text search:
+
 Create DataBase, Collection and index in mongoDB
 1. Create DataBase:
     create db : use db_name; EX: use latest
