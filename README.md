@@ -9,6 +9,6 @@ Create DataBase, Collection and index in mongoDB
 3. Create Text Index for full text search
     db.collection_name.createIndex({"fieldName1":"text","fieldName2":"text"}); EX: db.product.createIndex({"name":"text","description":"text"});
  4. Build the application and run it in port number 8080
- 5. Swaggar url : http://localhost:8080/v2/api-docs
+ 5. Swagger url : http://localhost:8080/v2/api-docs
  
 
