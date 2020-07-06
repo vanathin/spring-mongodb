@@ -17,6 +17,9 @@ public class ProductDaoImpl {
     @Autowired
     private ProductDAO productDao;
 
+    @Autowired
+    private Response<Product> resp;
+
     public String save(Product product){
         return Optional.ofNullable(product)
                 .map(product1 -> productDao.save(product1))
@@ -26,8 +29,6 @@ public class ProductDaoImpl {
 
     public Response<Product> findByTextIndex(String search, int start, int limit){
         Page<Product> list = productDao.findByTextIndex(search, PageRequest.of(start, limit));
-        list.getContent();
-        Response<Product> resp = new Response<>();
         resp.setMyList(list.getContent());
         resp.setLimit(list.getSize());
         resp.setStart(list.getNumber());
