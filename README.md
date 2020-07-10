@@ -11,4 +11,15 @@ Create DataBase, Collection and index in mongoDB
  4. Build the application and run it in port number 8080
  5. Swagger url : http://localhost:8080/v2/api-docs
  
+ 6. This project is reading property files from Git using spring cloug config server.
+ 
+        How to consume properties using config server
+	        1. Add spring-cloud-starter-config, Actutor dependency in pom.xml
+	        2. Add config server URL in bootstrap.properties file as it loads before application.properties file. So on spring boot up time it loads all the property files from                   git using config server
+	        3. Any property file committed in git. We have to call actutor's refresh api to get the latest value
+                If we use @ConfigurationProperties() no need to use @RefreshScope annotation
+  7. To register service in eureka, we need to add following eureka server url in applications.propertiesfile
+            eureka.client.serviceUrl.defaultZone:http://localhost:8761/eureka
+   8. Add @EnableEurekaClient in main method
+ 
 
