@@ -20,7 +20,6 @@ Create DataBase, Collection and index in mongoDB
                 If we use @ConfigurationProperties() no need to use @RefreshScope annotation
   7. Discovery service - make sure eureka server should run
   	To register service in eureka, we need to add following eureka server url in applications.propertiesfile
-            eureka.client.serviceUrl.defaultZone:http://localhost:8761/eureka
-   	Add @EnableEurekaClient in main method
+            eureka.client.serviceUrl.defaultZone:http://localhost:8761/eureka and add @EnableEurekaClient in main method
  
 
